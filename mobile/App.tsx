@@ -1,4 +1,4 @@
-import { NativeBaseProvider, StatusBar } from "native-base";
+import { NativeBaseProvider, StatusBar } from 'native-base';
 import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto'
 
 import { Loading } from './src/components/Loading'
