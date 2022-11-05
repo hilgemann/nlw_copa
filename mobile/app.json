@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "nlwcopamobile",
-    "slug": "nlwcopamobile",
+    "name": "freinacopa",
+    "slug": "freinacopa",
+    "scheme": "freinacopa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
