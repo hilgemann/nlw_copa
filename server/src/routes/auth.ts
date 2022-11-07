@@ -59,11 +59,9 @@ export async function authRoutes(fastify: FastifyInstance) {
             avatarUrl: user.avatarUrl,
         }, {
             sub: user.id,
-            expiresIn: '1 day'
+            expiresIn: '2 days'
         })
 
         return {token}
-
-        //ya29.a0AeTM1ieug3_iNRIO1k4gb8u-s63sxlQ2bbqqN2wRIQYIv9wvjYY4F_zNUKQ09E47pnUiYAGyfl4g0QhJWDhTi5Hla40Ssm1MvoKhAmIpydYaV9G_GCaFiF1d1goItSepA7CuwkRlpdjlBcq4dPI5hdwq3WZaaCgYKAQwSARESFQHWtWOmQAqL8k6wdwEpxdbAtg7t1w0163
     })
 }

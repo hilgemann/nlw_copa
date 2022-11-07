@@ -1,24 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState }      from "react";
 import { HStack, useToast, VStack } from "native-base";
-import { useRoute } from '@react-navigation/native'
-import { Share } from 'react-native';
+import { useRoute }                 from '@react-navigation/native'
+import { Share }                    from 'react-native';
 
-import { api } from "../services/api";
+import { api }             from "../services/api";
 
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
-import { Header } from "../components/Header";
-import { Loading } from "../components/Loading";
-import { Option } from "../components/Option";
-import { PoolCardProps } from '../components/PoolCard'
-import { PoolHeader } from "../components/PoolHeader";
+import { Guesses }         from "../components/Guesses";
+import { Header }          from "../components/Header";
+import { Loading }         from "../components/Loading";
+import { Option }          from "../components/Option";
+import { PoolCardProps }   from '../components/PoolCard'
+import { PoolHeader }      from "../components/PoolHeader";
 
 interface RouteParams {
     id: string;
 }
 
 export function Details() {
-    const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses');
     const [isLoading, setIsLoading] = useState(true);
+    const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses');
     const [poolDetails, setPoolDetails] = useState<PoolCardProps>({} as PoolCardProps);
 
     const route = useRoute();
@@ -90,7 +91,7 @@ export function Details() {
                         />
                     </HStack>
 
-
+                    <Guesses poolId={poolDetails.id} code={poolDetails.code} />
                 </VStack>
 
                 : <EmptyMyPoolList code={poolDetails.code} />
